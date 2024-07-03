@@ -3,6 +3,10 @@ from sqlalchemy.orm import Session
 import models, schemas
 
 
+#http://127.0.0.1:8000/docs#/
+#http://127.0.0.1:8000/
+#http://192.168.238.1:3000/
+#http://127.0.0.1:8000/docs#/
 
 def get_user(db: Session, user_id: int):
     return db.query(models.User).filter(models.User.id == user_id).first()
